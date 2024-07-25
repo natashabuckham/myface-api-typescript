@@ -1,0 +1,16 @@
+.post {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+.img-placeholder {
+    img {
+        background-color: lightgrey;
+        width: 100%;
+    }
+}
+
+.credits {
+    text-align: left;
+}

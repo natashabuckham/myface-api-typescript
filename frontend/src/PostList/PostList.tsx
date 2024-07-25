@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Post from "../Post/Post";
 import { PostModel } from "../Interfaces";
+import './PostList.scss';
 
 export default function PostList() {
     const [ posts, setPosts ] = useState<PostModel[]>();
@@ -14,8 +15,8 @@ export default function PostList() {
     return (
         <div>
             {
-              posts && posts.map((post) => (
-                <div>
+              posts && posts.map((post, index) => (
+                <div key={index}>
                     <Post 
                     username={post.postedBy.username} 
                     imageUrl={post.imageUrl} 
