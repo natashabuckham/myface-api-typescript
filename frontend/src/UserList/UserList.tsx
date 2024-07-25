@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { UserModel } from "../Interfaces";
 
 export default function UserList() {
-    const [ users, setUsers ] = useState(null);
+    const [ users, setUsers ] = useState<UserModel[]>();
 
     useEffect(() => {
         fetch("http://localhost:3001/users")
@@ -12,9 +13,10 @@ export default function UserList() {
     return (
         <ol>
             {
-                users && users.map((user) => (
-                    <li>
-                        {user.name}
+                users && users.map((user, index) => (
+                    <li key={index}>
+                        <a href={`/users/${user.id}`}>{user.name}</a>
+                        {/* <Link to= */}
                     </li>
                 ))
             }

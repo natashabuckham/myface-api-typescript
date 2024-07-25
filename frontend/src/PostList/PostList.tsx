@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import Post from "../Post/Post";
+import { PostModel } from "../Interfaces";
 
 export default function PostList() {
-    const [ posts, setPosts ] = useState(null);
+    const [ posts, setPosts ] = useState<PostModel[]>();
     
     useEffect(() => {
         fetch("http://localhost:3001/posts")
