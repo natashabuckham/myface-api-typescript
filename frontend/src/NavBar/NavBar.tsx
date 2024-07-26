@@ -11,10 +11,11 @@ export default function NavBar() {
 
     return (
         <div className='header-container'>
-            <nav>
+            <nav className='nav-menu'>
                 <a className="nav-link" href="/posts">Posts</a>
                 <a className="nav-link" href="/users">Users</a>
                 <a className="nav-link" href="/posts/create">New Post</a>
+                <a className="nav-link" href="/users/create">New User</a>
             </nav>
         </div>
         // <nav className="header-container">

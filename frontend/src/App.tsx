@@ -7,6 +7,7 @@ import PostList from './PostList/PostList'
 import UserList from './UserList/UserList'
 import UserDetail from './UserDetail/UserDetail'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import CreateUser from './CreateUser/CreateUser'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/posts" element={<PostList/>}/>
         <Route path="/users" element={<UserList />}/>
         <Route path="/users/:id" element={<UserDetail />}/>
+        <Route path="/users/create" element={<CreateUser />}/>
         <Route path="*" element={<div>
             Sorry - that page doesn't exist, try these:
             <Link to="/posts">Posts</Link>
